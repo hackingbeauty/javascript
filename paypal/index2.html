@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="paypal, mini cart, minicart, add to cart, paypal cart, integration, javascript" />
+		<meta name="description" content="The PayPal Mini Cart is a cool new way to improve your integration with the PayPal Cart." />
+		<title>PayPal Mini Cart - PayPal Labs</title>
+		<link rel="stylesheet" type="text/css" href="https://minicart.paypal-labs.com/minicart.css" />
+		<link rel="alternate" type="application/rss+xml"  href="https://minicart.paypal-labs.com/?rss" title="PayPal Mini Cart RSS Feed" />
+		<script type="text/javascript">
+			var MiniCart = {
+				base: 'https://minicart.paypal-labs.com/'
+			};
+		</script>		
+		<script src="javascripts/minicart2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		    var MiniCart = {
+		        displayEdge: 'L',
+		        edgeDistance: '50px',
+		        cookiePath: '/',
+		        currencySymbol: '$',
+		        onAddToCart: function (product) { },
+		        onUpdateTotal: function () { },
+		        onCheckout: function () { }
+		    };
+		 </script>	
+	</head>
+	<body>
+		<div id="header">
+			<h1><a href="https://www.paypal-labs.com/"><img src="images/paypal_labs.gif" width="200" height="50" alt="PayPalLabs logo " /></a></h1>
+		</div>
+		<div id="title">
+
+			<h2>The PayPal Mini Cart</h2>
+		</div>
+		<div id="content">
+			<p>The PayPal Mini Cart is a great way to improve your PayPal Cart integration by creating an overlay on your e-commerce website which appears as a user adds a product to their cart. This results in a smoother user experience for the customers and they never need to leave your website until they're ready to checkout!</p>
+			<p>Try it out below by adding a product to your cart:</p>
+
+			<div class="demo container">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+					<fieldset>
+						<input type="hidden" name="cmd" value="_cart" />
+						<input type="hidden" name="add" value="1" />
+						<input type="hidden" name="business" value="labs-feedback-minicart@paypal.com" />
+						<input type="hidden" name="item_name" value="Product 1" />
+						<input type="hidden" name="amount" value="1.00" />
+						<input type="hidden" name="shipping" value="1.00" />
+						<h4>Product 1</h4>
+
+						<ul>
+							<li>Shipping: $1.00</li>
+							<li>Price: $1.00</li>
+						</ul>
+						<input type="submit" name="submit" value="Add to cart" class="button" />
+					</fieldset>
+				</form>
+
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<fieldset>
+						<input type="hidden" name="cmd" value="_cart" />
+						<input type="hidden" name="add" value="1" />
+						<input type="hidden" name="business" value="labs-feedback-minicart@paypal.com" />
+						<input type="hidden" name="item_name" value="Product 2" />
+						<input type="hidden" name="item_number" value="12345" />
+						<input type="hidden" name="amount" value="2.00" />
+						<h4>Product 2</h4>
+
+						<ul>
+							<li>Item Number: 12345</li>
+							<li>Price: $2.00</li>
+						</ul>
+						<input type="submit" name="submit" value="Add to cart" class="button" />
+					</fieldset>
+				</form>
+
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<fieldset>
+						<input type="hidden" name="cmd" value="_cart" />
+						<input type="hidden" name="add" value="1" />
+						<input type="hidden" name="business" value="labs-feedback-minicart@paypal.com" />
+						<input type="hidden" name="item_name" value="Product 3" />
+						<h4>Product 3</h4>
+						<ul>
+
+							<li>
+								<label>
+									Size:
+									<select name="os0">
+										<option value="Small">Small $3.00</option>
+										<option value="Medium">Medium $4.00</option>
+										<option value="Large">Large $5.00</option>
+									</select>
+
+								</label>
+								<input type="hidden" name="on0" value="Size" />
+								<input type="hidden" name="option_select0" value="Small" />
+								<input type="hidden" name="option_amount0" value="3.00" />
+								<input type="hidden" name="option_select1" value="Medium" />
+								<input type="hidden" name="option_amount1" value="4.00" />
+								<input type="hidden" name="option_select2" value="Large" />
+								<input type="hidden" name="option_amount2" value="5.00" />
+							</li>
+
+						</ul>
+						<input type="submit" name="submit" value="Add to cart" class="button" />
+					</fieldset>
+				</form>
+
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="last"> 
+					<fieldset>
+						<input type="hidden" name="business" value="labs-feedback-minicart@paypal.com" /> 
+						<input type="hidden" name="cmd" value="_cart" /> 
+						<input type="hidden" name="display" value="1" /> 
+						<input type="submit" name="submit" value="View your cart" class="button" />
+
+					</fieldset>
+				</form>
+			</div>
+			<p class="notice"><strong>Note:</strong> Proceeding to checkout will bring you to the live PayPal website. Please do not complete the transaction.</p>
+
+
+			<h3 id="setup">Interested? Let's get you setup</h3>
+			<ol>
+
+				<li>Make sure you have a PayPal Shopping Cart enabled page on your website. If you don't you can <a href="https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&amp;content_ID=developer/e_howto_html_paypal_shopping_cart" title="PayPal Shopping Cart">learn how to set one up</a> over at our Developer Central.</li>
+				<li>Download and save the <a href="https://minicart.paypal-labs.com/minicart.js" title="JavaScript code for the Mini Cart">Mini Cart JavaScript</a> (version 1.4). There's also a <a href="https://minicart.paypal-labs.com/minicart-min.js" title="Minified JavaScript code for the Mini Cart">minified version</a> available.</li>
+				<li>
+
+					Next, you'll need to include the following bit of JavaScript on your page before the closing &lt;/body&gt; tag (make sure to change the file path to where you saved the JavaScript file):
+					<pre class="example container"><code>&lt;script src=&quot;/path/to/minicart.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre>
+				</li>
+				<li>Finally, send a note to <a href="mailto:labs-feedback-minicart@paypal.com?subject=PayPal%20Mini%20Cart">labs-feedback-minicart@paypal.com</a> and let us know what you think.</li>
+
+			</ol>
+
+			<p>It's as simple as that! Now the Mini Cart will appear when a user adds a product to, views, or has an item in their cart.</p>
+
+			<h3 id="customize">Customization</h3>
+			<p>You can customize the script to make it work for your site by creating a JavaScript object, <em>MiniCart</em>, and setting any of the following optional properties.</p>
+			<dl>
+
+				<dt>displayEdge</dt>
+				<dd>The edge of the page the cart should pin to. Set to "L" for left or "R" for right.</dd>
+				<dt>edgeDistance</dt>
+				<dd>Distance from the edge the cart should appear.</dd>
+				<dt>cookiePath</dt>
+				<dd>The base path of your website to set the cookie to (primarily for shared website hosting).</dd>
+
+				<dt>currencySymbol</dt>
+				<dd>The symbol which appears before the price and subtotal.</dd>
+				<dt>onAddToCart</dt>
+				<dd>A custom function run before a product is added to the cart. The product is passed as the argument. Returning a value of <em>false</em> will cancel adding the product.</dd>
+				<dt>onUpdateTotal</dt>
+
+				<dd>A custom function run before the total is updated. Available variables are <em>this.products</em> and <em>this.settings</em>.</dd>
+				<dt>onCheckout</dt>
+				<dd>A custom function run before the cart contents are sent to PayPal. Available variables are <em>this.products</em> and <em>this.settings</em>. Returning a value of <em>false</em> will cancel checkout.</dd>
+
+			</dl>
+			<p>See below for an example:</p>
+			<pre class="example container"><code>&lt;script type=&quot;text/javascript&quot;&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;var MiniCart = {<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;displayEdge: &#x27;R&#x27;,<br />
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;edgeDistance: &#x27;50px&#x27;,<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cookiePath: &#x27;/&#x27;,<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currencySymbol: &#x27;$&#x27;,<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onAddToCart: function (product) { ... },<br />
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onUpdateTotal: function () { ... },<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onCheckout: function () { ... }<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;};<br />
+
+ &lt;/script&gt;</code></pre>
+
+
+			<h3 id="faq">FAQ</h3>
+
+			<ol>
+				<li>
+					<strong>Are hosted / encrypted buttons supported?</strong><br />The Mini Cart doesn't yet work with what we call our "hosted" or "encrypted" buttons. We're working on support for them and will release an update once it's available.
+
+					<ul>
+						<li>
+							If you are logged in to paypal.com and are creating or already have a hosted / encrypted button and you'd like to use the Mini Cart you'll need to:
+							<ol>
+								<li>Create a button on PayPal's website and <strong>uncheck</strong> the <strong>Save button at PayPal</strong> checkbox under <strong>Step 2: Track inventory, profit &amp; loss</strong>.</li>
+
+								<li>Once you've created the button click <strong>Remove code protection</strong> before copying your button's code.</li>
+							</ol>
+							 This will provide you with button code you can include on your website and works with the Mini Cart.
+						</li>
+						<li>If you are not logged in when you create a button you shouldn't need to do any additional steps to be compatible with the Mini Cart.</li>
+					</ul>
+					<p class="notice"><strong>Note:</strong> If using a non-hosted button you must check that your payment  was for the correct amount before delivering any goods.</p>
+
+				</li>
+				<li><strong>Is non-JavaScript supported?</strong><br />If your users do not have a JavaScript-capable browser, they will still be able to see your cart buttons and make purchases, but the user interface will gracefully degrade to the standard PayPal cart.</li>
+				<li><strong>The Mini Cart isn't appearing the same as on this page. Why?</strong><br />This can occur if your page is being rendered in the browser's Quirks mode. Example issues include being permanently displayed in the bottom left of the screen or not scrolling properly. To fix the issue you can validate and correct your HTML markup using the <a href="http://validator.w3.org/" title="W3C validator">W3C Markup Validator</a>.</li>
+			</ol>
+			
+			<h3 id="news">News and updates <a href="https://minicart.paypal-labs.com/?rss" title="Mini Cart RSS feed"><img src="images/feed.png" width="14" height="14" alt="RSS feed" /></a></h3>
+
+			<p>Keep posted on updates by subscribing to our <a href="https://minicart.paypal-labs.com/?rss" title="Mini Cart RSS feed">RSS feed</a>.</p>
+			<p><em>Version 1.4</em></p><p>Updates include:</p><ul><li>Updated the interaction so that the Mini Cart disappears on page load if there are no active products</li><li>Fix to prevent an issue where the cart will change pages when the Checkout button is clicked</li><li>Updated display of multiple item options to appear stacked</li><li>Fix to prevent Opera from dropping the cookie</li></ul>			
+			<h3 id="comments">Questions or comments?</h3>
+			<p>We're working to create a perfect experience with the PayPal Mini Cart. If you have questions or suggestions, please email us at <a href="mailto:labs-feedback-minicart@paypal.com?subject=PayPal%20Mini%20Cart">labs-feedback-minicart@paypal.com</a>.</p>
+
+			<div id="footer">
+				<ul>
+					<li><a href="https://www.paypal.com/" title="Visit PayPal.com">PayPal</a></li>
+					<li><a href="https://www.paypal.com/us/cgi-bin/helpscr?cmd=p/gen/ua/policy_privacy-outside" title="PayPal privacy information">Privacy</a></li>
+					<li><a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=p/gen/jobs-outside" title="Jobs at PayPal">Jobs</a></li>
+					<li class="last"><a href="http://www.paypal.com/us/cgi-bin/helpscr?cmd=p/gen/ua/ua-outside" title="PayPal legal agreements">Legal Agreements</a></li>
+
+				</ul>
+
+				<p>Copyright &copy; 1999&ndash;2010 PayPal. All rights reserved.</p>
+			</div>
+		</div>
+		
+	</body>
+
+</html>

@@ -1,0 +1,53 @@
+* {margin: 0;padding: 0;} /* Resets all Margins and Paddings to 0 */
+
+body {font-family: Verdana, Arial, sans-serif;font-size: .625em;}
+
+ul, li { margin: 0;padding: 0;list-style: none; }
+
+p { margin: 0;padding: 0; }
+
+h1 { font-size: 1.8em; } /* Default Size for h1 is 18px - based on an 10px height */
+
+h2 { font-size: 1.5em; } /* Default Size for h2 is 15px - based on an 10px height */
+
+h3 { font-size: 1.2em; } /* Default Size for h3 is 12px - based on an 10px height */
+
+h4 { font-size: 1.1em; } /* Default Size for h4 is 11px - based on an 10px height */
+
+h5 { font-size: 1em; }   /* Default Size for h5 is 10px - based on an 10px height */
+
+h6 { font-size: .9em; }  /* Default Size for h6 is 9px  - based on an 10px height */
+
+/* ---------------------------- */
+
+a { text-decoration: none; cursor: pointer; }		/* link */
+
+a:active, a.active { outline: none; }				/* Removes dotted area around active <a> tags in Firefox */
+
+a:hover { text-decoration: none; }					/* mouse over link */
+
+/* ---------------------------- */
+
+img { border: 0; }									/* images and iframes don't have a border by default. */
+
+/* ---------------------------- */
+
+.clear { clear: both; }
+
+.hide { display: none; }
+
+.strong { font-weight: bold; }
+
+/* ---------------------------- */
+
+.text_18 { font-size: 1.8em; }
+
+.text_15 { font-size: 1.5em; }
+
+.text_12 { font-size: 1.2em; }
+
+.text_11 { font-size: 1.1em; }
+
+.text_10 { font-size: 1em; }
+
+.text_9  { font-size: .9em; }

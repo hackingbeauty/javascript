@@ -1,0 +1,165 @@
+body {
+	background: #FFF;
+	color: #000;
+	font-family: Arial;
+}
+
+#auto {
+	width: 300px;
+	color: #000;
+	position: relative;
+}
+
+#auto textarea {
+	margin-left: 17%;
+	width: 83%;
+	height: 100px;
+}
+
+#auto label {
+	font-size: 14px;
+	width: 16%;
+	display: block;
+	position: absolute;
+	top 0px;
+	left: 0px;
+	text-align: right;
+	margin-top: -3px;
+	padding-right: 1%;
+}
+
+#auto img {
+  width: 16px;
+  height: 16px;
+}
+
+#auto tt {
+	line-height: 20px;
+}
+
+#auto .rest {
+	margin-left: 17%;
+	width: 83%;
+}
+
+#auto .rest.from img {
+	position: relative;
+	top: 2px;
+}
+
+#auto input#q, #auto textarea {
+	border: 2px solid #6D6D6D;
+	font-family: Arial;
+	font-size: 14px;
+	padding: 1px 2px;
+}
+
+/*
+ * Handle the colors/style of the rows.
+ */
+
+#auto .send {
+	background: #78ABBE;
+	font-size: 18px;
+	font-weight: bold;
+	color: #FFF;
+	padding: 3px;
+	margin-bottom: 5px;
+}
+
+#auto .query {
+	position: relative;
+	margin: 5px 0;
+}
+
+#auto .query #qloading {
+	display: none;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+
+#auto .query input {
+	width: 100%;
+}
+
+#auto .light {
+	background: #DBF1C3;
+	padding: 5px;
+	position: relative;
+	z-index: 90;
+}
+
+#auto .dark {
+	background: #D4DDC8;
+	padding: 5px;
+}
+
+#auto .submit {
+	text-align: right;
+	margin-top: 5px;
+}
+
+#auto .submit input {
+	font-size: 12px;
+	font-family: Arial;
+	color: #FFF;
+	background: #713928;
+	padding: 2px 4xp;
+	border: 0;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#results {
+  display: none;
+	position: absolute;
+	top: 25px;
+	right: 5px;
+	width: 79%;
+	z-index: 100;
+	background: #FFF;
+	border: 2px solid #6D6D6D;
+	border-top: 0px;
+}
+
+#results ul {
+	border-top: 1px solid #DDD;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#results li {
+	height: 20px;
+	padding: 3px 0 0 0;
+	border-bottom: 1px solid #DDD;
+	font-size: 12px;
+	position: relative;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#results li img {
+	position: absolute;
+	top: 4px;
+	left: 2px;
+	width: 16px;
+	height: 16px;
+}
+
+#results li div {
+	margin-left: 22px;
+}
+
+#results li div strong {
+	font-size: 1.1em;
+}
+
+#results li.odd {
+	background: #F5F5F5;
+}
+
+#results li.cur {
+	background: #FDFDA4;
+}
